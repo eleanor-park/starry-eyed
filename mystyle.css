@@ -1,0 +1,12 @@
+@import compass
+
+body {
+    background-color: #211E51;
+}
+
+h1 {
+    color: white;
+    margin-left: 20px;
+    text-align: center;
+}
+
