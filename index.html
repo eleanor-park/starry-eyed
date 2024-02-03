@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+
+    .row {
+        display: flex;
+    }
+
+    /* Create three equal columns that sits next to each other */
+    .column {
+        flex: 33.33%;
+        padding: 5px;
+    }
+</style>
 <head>
     <link rel="stylesheet" href="mystyle.css">
     <meta charset="UTF-8">
@@ -7,7 +19,27 @@
 </head>
 <body>
 <h1> Create a personalized journey through the stars! </h1>
-<h3> Which galaxy speaks to you the most? </h3></h>
+<h3> Which galactic aura speaks to you the most? </h3>
+
+<br> <br><br>
+
+<div class = "row">
+    <div class = "column">
+        <img src="https://th-thumbnailer.cdn-si-edu.com/Oa5-B
+Dp6qcarNc9yxAvKivfU6RI=/1000x750/filters:no_upscale()/
+https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/
+d1/27/d127ac61-a3f3-4a26-a4f4-f855de632580/phenom-endings-space-jan14.jpg" alt = "light blue galaxy with yellow stars">
+    </div>
+    <div class = "column">
+        <img src = "https://upload.wikimedia.org/wikipedia/commons/3/3e/Hubble_Sees_a_Horsehead_of_a_Different_Color.jpg"
+             alt = "pink galaxy with light blue nebula">
+    </div>
+    <div class = "column">
+        <img src = "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2023/12/star_cluster_ic_348_nircam_
+image/25361255-1-eng-GB/Star_Cluster_IC_348_NIRCam_image_pillars.jpg" alt = "free-floating pink brown dwarf">
+    </div>
+</div>
+
 <div class="star-layers">
     <div class="star-layer" id="stars"></div>
     <div class="star-layer" id="stars2"></div>

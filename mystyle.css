@@ -34,6 +34,14 @@ html {
     animation: animStar 150s linear infinite;
 }
 
+img {
+    display: block;
+    margin: 50px auto;
+    width: 300px;
+    height: 300px;
+}
+
+
 @keyframes animStar {
     from {
         transform: translateX(0px);
