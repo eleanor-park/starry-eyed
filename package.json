@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@gradio/client": "^0.10.1",
     "sass": "^1.70.0"
   }
 }
