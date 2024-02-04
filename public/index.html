@@ -1,50 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<style>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-    .row {
-        display: flex;
-    }
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-    /* Create three equal columns that sits next to each other */
-    .column {
-        flex: 33.33%;
-        padding: 5px;
-    }
-</style>
-<head>
-    <link rel="stylesheet" href="mystyle.css">
-    <meta charset="UTF-8">
-    <title>Starry-Eyed</title>
-</head>
-<body>
-<h1> Create a personalized journey through the stars! </h1>
-<h3> Which galactic aura speaks to you the most? </h3>
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-<br> <br><br>
-
-<div class = "row">
-    <div class = "column">
-        <img src="https://th-thumbnailer.cdn-si-edu.com/Oa5-B
-Dp6qcarNc9yxAvKivfU6RI=/1000x750/filters:no_upscale()/
-https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/
-d1/27/d127ac61-a3f3-4a26-a4f4-f855de632580/phenom-endings-space-jan14.jpg" alt = "light blue galaxy with yellow stars">
-    </div>
-    <div class = "column">
-        <img src = "https://upload.wikimedia.org/wikipedia/commons/3/3e/Hubble_Sees_a_Horsehead_of_a_Different_Color.jpg"
-             alt = "pink galaxy with light blue nebula">
-    </div>
-    <div class = "column">
-        <img src = "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2023/12/star_cluster_ic_348_nircam_
-image/25361255-1-eng-GB/Star_Cluster_IC_348_NIRCam_image_pillars.jpg" alt = "free-floating pink brown dwarf">
-    </div>
-</div>
-
-<div class="star-layers">
-    <div class="star-layer" id="stars"></div>
-    <div class="star-layer" id="stars2"></div>
-    <div class="star-layer" id="stars3"></div>
-</div>
-</body>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
 </html>

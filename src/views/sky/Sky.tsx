@@ -1,6 +1,7 @@
 import { observer } from "mobx-react";
 import * as React from 'react'
-import { SkyStore } from '../../stores';
+import { SkyStore, WelcomePageStore } from '../../stores';
+import { WelcomePage } from "../WelcomePage/WelcomePage";
 import "./Sky.scss";
 
 interface SkyProps {
@@ -44,7 +45,11 @@ export class Sky extends React.Component<SkyProps> {
         let store = this.props.store;
         return (
             <div className='sky-container' style={{position: 'relative'}}>
-                <div className='sky' style={{transform: this.props.store.transform}} />
+                <div className='sky' style={{transform: this.props.store.transform}} >
+                    <div className='welcomepagebox' >
+                        < WelcomePage store={new WelcomePageStore} />
+                    </div>
+                </div>
             </div>
         )
     }

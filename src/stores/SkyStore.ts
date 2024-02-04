@@ -2,6 +2,8 @@ import { observable, computed } from 'mobx';
 
 export class SkyStore {
 
+public id = "sky";
+
 @observable
 public x: number = 0;
 
