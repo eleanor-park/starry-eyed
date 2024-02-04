@@ -44,7 +44,7 @@ export class Sky extends React.Component<SkyProps> {
         let store = this.props.store;
         return (
             <div className='sky-container' style={{position: 'relative'}}>
-                <div className='sky' style={{transform: this.props.transform}}
+                <div className='sky' style={{transform: this.props.store.transform}} />
             </div>
         )
     }
