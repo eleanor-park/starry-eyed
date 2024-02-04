@@ -8,6 +8,7 @@ public x: number = 0;
 @observable
 public y: number = 0;
 
+
 public url: string = "";
 public constellation: string = "";
 public information: string = "";
@@ -17,9 +18,11 @@ public information: string = "";
         return "translate(" + this.x + "px," + this.y + "px)"; // for CSS transform property
     }
 
-constructor(url: string, constellation: string, information: string) {
+constructor(url: string, constellation: string, information: string, x: number, y: number) {
     this.url = url;
     this.constellation = constellation;
     this.information = information;
+    this.x = x;
+    this.y = y;
 }
 }

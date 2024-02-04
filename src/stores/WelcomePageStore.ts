@@ -5,10 +5,10 @@ export class WelcomePageStore {
 public id = "welcome";
 
 @observable
-public x: number = 0;
+public x: number = 200;
 
 @observable
-public y: number = 0;
+public y: number = 100;
 
 @computed
     public get transform(): string {
