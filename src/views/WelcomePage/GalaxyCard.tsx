@@ -1,7 +1,8 @@
 import { observer } from "mobx-react";
 import * as React from 'react'
-import { GalaxyCardStore } from '../../stores';
+import { GalaxyCardStore, GradioComponentStore } from '../../stores';
 import "./GalaxyCard.scss";
+import { GradioComponent } from "./GradioComponent";
 
 interface GalaxyCardProps {
     store: GalaxyCardStore;
@@ -9,6 +10,8 @@ interface GalaxyCardProps {
 
 @observer
 export class GalaxyCard extends React.Component<GalaxyCardProps> {
+
+    private gradioStore: GradioComponentStore = new GradioComponentStore();
 
     onPointerDown = (e: React.PointerEvent): void => {
         e.stopPropagation();
@@ -25,6 +28,7 @@ export class GalaxyCard extends React.Component<GalaxyCardProps> {
                     <h2>Your Constellation:</h2>
                     <h1>{store.constellation}</h1>
                     <p>{store.information}</p>
+                    <GradioComponent store={this.gradioStore}/>
                 </div>
             );
         }
