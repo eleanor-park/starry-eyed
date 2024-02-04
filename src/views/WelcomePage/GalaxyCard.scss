@@ -1,16 +1,32 @@
 .galaxycard {
+    width: 300px;
+    background-color: lightgrey;
+    height: 400px;
     position: absolute;
 
-    .sideA {
-        height: 300px;
-        width: 100px;
+    &.sideA {
         position: absolute;
     }
 
-    .sideB {
-        height: 300px;
-        width: 100px;
-        position: absolute;
+    &.sideB {
+        h2 {
+            top: 10px;
+            left: 75px;
+            font-size: 15px;
+            position: absolute;
+        }
+        h1 {
+            left: 42px;
+            top: 20px;
+            font-size: 35px;
+            position: absolute;
+        }
+        p {
+            padding: 20px;
+            top: 100px;
+            position: absolute;
+        }
+        // position: absolute;
     }
 
     img {

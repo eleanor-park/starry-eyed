@@ -1,4 +1,4 @@
-import { observable, computed } from 'mobx';
+import { observable, computed, action } from 'mobx';
 
 export class GalaxyCardStore {
 
@@ -13,6 +13,9 @@ public url: string = "";
 public constellation: string = "";
 public information: string = "";
 
+@observable
+public showConstellationFacts = false;
+
 @computed
     public get transform(): string {
         return "translate(" + this.x + "px," + this.y + "px)"; // for CSS transform property
@@ -24,5 +27,10 @@ constructor(url: string, constellation: string, information: string, x: number, 
     this.information = information;
     this.x = x;
     this.y = y;
+}
+
+@action
+public setConstellationFacts(show: boolean) {
+    this.showConstellationFacts = show;
 }
 }

@@ -43,8 +43,8 @@ export class WelcomePage extends React.Component<WelcomePageProps> {
         let store = this.props.store;
         return (
             <div className="welcomepage" style={{transform: store.transform}}>
-                <h1> Create a personalized journey through the stars! </h1>
-                <h3> Which galactic aura speaks to you the most? </h3>
+                <h1> ✩₊˚☾⋆₊✧ wish upon a star ✧₊⋆☾˚₊✩</h1>
+                <h3> choose a galaxy to send your wish into: </h3>
                 <div className="imagerow">
                     <GalaxyCard store={new GalaxyCardStore(Constants.IMAGE_1_LINK, Constants.IMAGE_1_NAME, Constants.IMAGE_1_INFO, 0, 170)} />
                     <GalaxyCard store={new GalaxyCardStore(Constants.IMAGE_2_LINK, Constants.IMAGE_2_NAME, Constants.IMAGE_2_INFO, 350, 170)} />
