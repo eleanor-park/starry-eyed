@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { SkyStore } from '../src/stores';
-import { Sky } from './views/Sky/Sky';
+import { Sky } from './views/sky/Sky';
 
 const sky = new SkyStore();
 
@@ -13,7 +13,7 @@ export class App extends React.Component {
     render() {
         return (
             <div className="App">
-              <Sky store={sky} /> 
+                <Sky store={sky} />
             </div>
         );
     }
