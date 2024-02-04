@@ -21,7 +21,7 @@ export class GalaxyCard extends React.Component<GalaxyCardProps> {
         if (this.showConstellationFacts) {
 
             return (
-                <div className='galaxycard sideB'>
+                <div className='galaxycard sideB' style={{transform: store.transform}}>
                     <h3>{store.constellation}</h3>
                     <p>{store.information}</p>
                 </div>
@@ -29,7 +29,7 @@ export class GalaxyCard extends React.Component<GalaxyCardProps> {
         }
         else {
             return (
-                <div className='galaxycard sideA'>
+                <div className='galaxycard sideA' style={{transform: store.transform}}>
                     <img src={store.url}/>
                 </div>
             );

@@ -15,6 +15,7 @@ export class Sky extends React.Component<SkyProps> {
     private isPointerDown: boolean = false;
 
     onPointerDown = (e: React.PointerEvent): void => {
+        e.preventDefault();
         e.stopPropagation();
         this.isPointerDown = true;
         document.removeEventListener("pointermove", this.onPointerMove);
@@ -45,7 +46,7 @@ export class Sky extends React.Component<SkyProps> {
     render() {
         let store = this.props.store;
         return (
-            <div className='sky-container' >
+            <div className='sky-container' onPointerDown={this.onPointerDown} >
                 <div className='sky' style={{transform: this.props.store.transform}} >
                     <div className='welcomepagebox' >
                         < WelcomePage store={this.welcomePage} />

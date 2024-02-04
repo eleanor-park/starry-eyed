@@ -1,0 +1,21 @@
+.galaxycard {
+    position: absolute;
+
+    .sideA {
+        height: 300px;
+        width: 100px;
+        position: absolute;
+    }
+
+    .sideB {
+        height: 300px;
+        width: 100px;
+        position: absolute;
+    }
+
+    img {
+        position: absolute;
+        height: 400px;
+        width: 300px;
+    }
+}

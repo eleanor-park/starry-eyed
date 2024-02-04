@@ -1,13 +1,19 @@
 .welcomepage {
+    padding: 15px;
     position: absolute;
-    height: 400px;
-    width: 800px;
-    background-color: white;
-    
-    top: 500;
-    left: 500;
+    height: 600px;
+    width: 1000px;
+    // background-color: white;
 
     h1 {
+        position: absolute;
         color: white;
+        left: 160px;
+    }
+    h3 {
+        position: absolute;
+        color: gray;
+        left: 320px;
+        top: 80px;
     }
 }

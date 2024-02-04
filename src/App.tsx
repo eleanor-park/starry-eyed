@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { SkyStore } from '../src/stores';
-import { Sky } from './views/sky/Sky';
+import { Sky } from './views/Sky/Sky';
 
 const sky = new SkyStore();
 
