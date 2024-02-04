@@ -2,6 +2,8 @@ import { observer } from "mobx-react";
 import * as React from 'react'
 import { GalaxyCardStore } from '../../stores';
 import "./GalaxyCard.scss";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 interface GalaxyCardProps {
     store: GalaxyCardStore;
@@ -21,14 +23,15 @@ export class GalaxyCard extends React.Component<GalaxyCardProps> {
         this.forceUpdate();
     }
 
-    onSubmit = (e: React.MouseEvent<HTMLFormElement>) => {
+    onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.stopPropagation();
         alert("your wish has been sent into the universe <3")
+        this.props.store.setSide('a');
+        this.forceUpdate();
     }
 
-    setWish = (e: React.ChangeEvent<HTMLInputElement>) => {
-        e.stopPropagation();
-        this.props.store.setWish(e.target.value);
+    setWish = (wish: string) => {
+        this.props.store.setWish(wish);
         this.forceUpdate();
     }
 
@@ -46,21 +49,26 @@ export class GalaxyCard extends React.Component<GalaxyCardProps> {
                 <div className='galaxycard sideB' style={{transform: store.transform}} onPointerDown={this.onPointerDown}>
                     <h2>Your Constellation:</h2>
                     <h1>{store.constellation}</h1>
+                    <img src={store.constellationImg}/>
                     <p>{store.information}</p>
                 </div>
             );
         }
         else {
+            let noToolbar = {
+                toolbar: false,
+            };
             return (
                 <div className='galaxycard sideC' style={{transform: store.transform}} onPointerDown={this.onPointerDown}>
-                    <p>{store.wishPrompt}</p>
-                    <form onSubmit={this.onSubmit} >
-                        <label style={{fontWeight: "bold"}}>
-                            <input type="text" value={store.wish} onChange={this.setWish} 
-                                style={{height:"150px", width: 220, marginTop: "10px"}} />
-                        </label>
-                        <input type="submit" value="Send!" style={{marginTop: "3px"}} />
-                    </form>
+                    <h2>{store.wishPrompt}</h2>
+                    <div className="galaxycard sideC wishbox">
+                        <ReactQuill theme="snow"
+                                modules={noToolbar}
+                                value={store.wish}
+                                onChange={this.setWish}
+                                placeholder="Enter your wish here!" />
+                    </div>
+                    <button onClick={this.onClick} style={{marginTop: "3px"}} >Send! </button>
                 </div>
             )
         }

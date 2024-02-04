@@ -17,13 +17,14 @@
         }
         h1 {
             left: 42px;
-            top: 30px;
+            top: 25px;
             font-size: 35px;
             position: absolute;
         }
         p {
+            font-size: 14px;
             padding: 20px;
-            top: 85px;
+            top: 175px;
             position: absolute;
         }
 
@@ -34,19 +35,36 @@
             top: 400px;
             font-style: bold;
         }
+
+        img {
+            position: absolute;
+            top: 85px;
+            padding: 20px;
+            height: 80px;
+            width: 260px;
+        }
     }
 
     &.sideC {
-        p {
+        h2 {
             padding: 25px;
             position: absolute;
-            font-size: 18px;
-            top: 40px;
+            font-size: 15px;
+            font-weight: bold;
+            top: 8px;
         }
-        form {
-            padding: 35px;
+        &.wishbox {
+            padding: 20px;
+            width: 255px;
+            height: 200px;
             position: absolute;
-            top: 120px;
+            top: 80px;
+        }
+        button {
+            width: 70px;
+            position: absolute;
+            top: 330px;
+            left: 115px;
         }
     }
 
@@ -55,4 +73,5 @@
         height: 400px;
         width: 300px;
     }
+
 }

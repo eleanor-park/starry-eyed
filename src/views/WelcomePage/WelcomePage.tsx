@@ -47,11 +47,11 @@ export class WelcomePage extends React.Component<WelcomePageProps> {
                 <h3> choose a galaxy to send your wish into: </h3>
                 <div className="imagerow">
                     <GalaxyCard store={new GalaxyCardStore(Constants.IMAGE_1_LINK, Constants.IMAGE_1_NAME, Constants.IMAGE_1_INFO,
-                        Constants.WISH_PROMPT_1, 0, 170)} />
+                        Constants.WISH_PROMPT_1, 0, 170, Constants.CONSTELLATION_1)} />
                     <GalaxyCard store={new GalaxyCardStore(Constants.IMAGE_2_LINK, Constants.IMAGE_2_NAME, Constants.IMAGE_2_INFO, 
-                        Constants.WISH_PROMPT_2, 350, 170)} />
+                        Constants.WISH_PROMPT_2, 350, 170, Constants.CONSTELLATION_2)} />
                     <GalaxyCard store={new GalaxyCardStore(Constants.IMAGE_3_LINK, Constants.IMAGE_3_NAME, Constants.IMAGE_3_INFO, 
-                        Constants.WISH_PROMPT_3, 700, 170)} />
+                        Constants.WISH_PROMPT_3, 700, 170, Constants.CONSTELLATION_3)} />
                 </div>
             </div>
         );
