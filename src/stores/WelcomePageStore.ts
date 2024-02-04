@@ -2,6 +2,8 @@ import { observable, computed } from 'mobx';
 
 export class WelcomePageStore {
 
+public id = "welcome";
+
 @observable
 public x: number = 0;
 
