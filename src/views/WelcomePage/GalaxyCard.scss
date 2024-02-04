@@ -1,6 +1,6 @@
 .galaxycard {
     width: 300px;
-    background-color: lightgrey;
+    background-color: rgb(200, 200, 200);
     height: 400px;
     position: absolute;
 
@@ -10,23 +10,44 @@
 
     &.sideB {
         h2 {
-            top: 10px;
+            top: 15px;
             left: 75px;
             font-size: 15px;
             position: absolute;
         }
         h1 {
             left: 42px;
-            top: 20px;
+            top: 30px;
             font-size: 35px;
             position: absolute;
         }
         p {
             padding: 20px;
-            top: 65px;
+            top: 85px;
             position: absolute;
         }
-        // position: absolute;
+
+        button {
+            padding: 10px;
+            position: absolute;
+            left: 60px;
+            top: 400px;
+            font-style: bold;
+        }
+    }
+
+    &.sideC {
+        p {
+            padding: 25px;
+            position: absolute;
+            font-size: 18px;
+            top: 40px;
+        }
+        form {
+            padding: 35px;
+            position: absolute;
+            top: 120px;
+        }
     }
 
     img {

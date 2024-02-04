@@ -46,9 +46,12 @@ export class WelcomePage extends React.Component<WelcomePageProps> {
                 <h1> ✩₊˚☾⋆₊✧ wish upon a star ✧₊⋆☾˚₊✩</h1>
                 <h3> choose a galaxy to send your wish into: </h3>
                 <div className="imagerow">
-                    <GalaxyCard store={new GalaxyCardStore(Constants.IMAGE_1_LINK, Constants.IMAGE_1_NAME, Constants.IMAGE_1_INFO, 0, 170)} />
-                    <GalaxyCard store={new GalaxyCardStore(Constants.IMAGE_2_LINK, Constants.IMAGE_2_NAME, Constants.IMAGE_2_INFO, 350, 170)} />
-                    <GalaxyCard store={new GalaxyCardStore(Constants.IMAGE_3_LINK, Constants.IMAGE_3_NAME, Constants.IMAGE_3_INFO, 700, 170)} />
+                    <GalaxyCard store={new GalaxyCardStore(Constants.IMAGE_1_LINK, Constants.IMAGE_1_NAME, Constants.IMAGE_1_INFO,
+                        Constants.WISH_PROMPT_1, 0, 170)} />
+                    <GalaxyCard store={new GalaxyCardStore(Constants.IMAGE_2_LINK, Constants.IMAGE_2_NAME, Constants.IMAGE_2_INFO, 
+                        Constants.WISH_PROMPT_2, 350, 170)} />
+                    <GalaxyCard store={new GalaxyCardStore(Constants.IMAGE_3_LINK, Constants.IMAGE_3_NAME, Constants.IMAGE_3_INFO, 
+                        Constants.WISH_PROMPT_3, 700, 170)} />
                 </div>
             </div>
         );
