@@ -8,6 +8,9 @@ interface SkyProps {
     store: SkyStore;
 }
 
+/**
+ * Class for the background sky.
+ */
 @observer
 export class Sky extends React.Component<SkyProps> {
 
@@ -44,7 +47,6 @@ export class Sky extends React.Component<SkyProps> {
 
 
     render() {
-        let store = this.props.store;
         return (
             <div className='sky-container' onPointerDown={this.onPointerDown} >
                 <div className='sky' style={{transform: this.props.store.transform}} >

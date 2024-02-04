@@ -9,6 +9,9 @@ interface WelcomePageProps {
     store: WelcomePageStore;
 }
 
+/**
+ * Class that represents the welcome page and message.
+ */
 @observer
 export class WelcomePage extends React.Component<WelcomePageProps> {
 

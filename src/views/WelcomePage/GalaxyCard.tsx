@@ -9,6 +9,9 @@ interface GalaxyCardProps {
     store: GalaxyCardStore;
 }
 
+/**
+ * Class to represent each of the 3 galaxy card
+ */
 @observer
 export class GalaxyCard extends React.Component<GalaxyCardProps> {
 
