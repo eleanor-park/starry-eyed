@@ -13,7 +13,7 @@ export class App extends React.Component {
     render() {
         return (
             <div className="App">
-              <Sky store={sky} /> 
+                <Sky store={sky} />
             </div>
         );
     }
