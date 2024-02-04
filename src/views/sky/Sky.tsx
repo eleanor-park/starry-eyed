@@ -11,6 +11,7 @@ interface SkyProps {
 @observer
 export class Sky extends React.Component<SkyProps> {
 
+    private welcomePage: WelcomePageStore = new WelcomePageStore();
     private isPointerDown: boolean = false;
 
     onPointerDown = (e: React.PointerEvent): void => {
@@ -44,10 +45,10 @@ export class Sky extends React.Component<SkyProps> {
     render() {
         let store = this.props.store;
         return (
-            <div className='sky-container' style={{position: 'relative'}}>
+            <div className='sky-container' >
                 <div className='sky' style={{transform: this.props.store.transform}} >
                     <div className='welcomepagebox' >
-                        < WelcomePage store={new WelcomePageStore} />
+                        < WelcomePage store={this.welcomePage} />
                     </div>
                 </div>
             </div>
