@@ -1,7 +1,9 @@
 import { observer } from "mobx-react";
 import * as React from 'react'
-import { WelcomePageStore } from '../../stores';
+import { GalaxyCardStore, WelcomePageStore } from '../../stores';
+import { GalaxyCard } from "./GalaxyCard";
 import "./WelcomePage.scss";
+import { Constants } from "../../Constants"
 
 interface WelcomePageProps {
     store: WelcomePageStore;
@@ -44,12 +46,9 @@ export class WelcomePage extends React.Component<WelcomePageProps> {
                 <h1> Create a personalized journey through the stars! </h1>
                 <h3> Which galactic aura speaks to you the most? </h3>
                 <div className="imagerow">
-                    <img src="https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/d1/27/d127ac61-a3f3-4a26-a4f4-f855de632580/phenom-endings-space-jan14.jpg" 
-                        alt= "light blue galaxy with yellow stars"/>
-                    <img src = "https://upload.wikimedia.org/wikipedia/commons/3/3e/Hubble_Sees_a_Horsehead_of_a_Different_Color.jpg"
-                        alt = "pink galaxy with light blue nebula"/>
-                    <img src = "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2023/12/star_cluster_ic_348_nircam_image/25361255-1-eng-GB/Star_Cluster_IC_348_NIRCam_image_pillars.jpg" 
-                        alt = "free-floating pink brown dwarf"/>
+                    <GalaxyCard store={new GalaxyCardStore(Constants.IMAGE_1_LINK, Constants.IMAGE_1_NAME, Constants.IMAGE_1_INFO)} />
+                    <GalaxyCard store={new GalaxyCardStore(Constants.IMAGE_2_LINK, Constants.IMAGE_2_NAME, Constants.IMAGE_2_INFO)} />
+                    <GalaxyCard store={new GalaxyCardStore(Constants.IMAGE_3_LINK, Constants.IMAGE_3_NAME, Constants.IMAGE_3_INFO)} />
                 </div>
             </div>
         );
